@@ -30,6 +30,7 @@ def evaluate(pre,y):
 ```
 ### 4.划分训练集与测试集
 训练集与测试集7-3分
+
 ```X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=2018)```
 ### 5.模型构建
 四个模型分别为随机森林、GBDT、XGBOOST、LightGBM，对这四个模型，设定一致的参数，分别为```learning_rate=0.05```, ```max_depth=3```, ```n_estimators=100```，即相同的初始条件。
@@ -68,7 +69,7 @@ for name,model in models:
     print(name,'accuracy_score,roc_auc_score：',acc,model_auc)
 ```
 ### 7.实验结果
-模型名称|所用时间|accuracy_score|AUC
+模型名称|所用时间(s)|accuracy_score|AUC
 -------|-------|--------------|---
 RandomForestClassifier|0.28|0.7666433076384023|0.5436084420936225
 GradientBoostingClassifier|0.97|0.7841625788367204|0.6339029555673791
